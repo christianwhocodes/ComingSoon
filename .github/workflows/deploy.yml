@@ -46,7 +46,7 @@ jobs:
           description: "${{ vars.SITE_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
           keywords: "${{ vars.SITE_KEYWORDS || 'maundy, bootstrap, template, coming soon' }}"
           author: "${{ vars.SITE_AUTHOR || 'Christian Who Codes' }}"
-          url: "${{ vars.SITE_URL || 'https://christianwhocodes.github.io' }}"
+          url: "${{ vars.SITE_URL || 'https://comingsoon.christianwhocodes.space' }}"
 
           hero:
             title: "${{ vars.HERO_TITLE || 'Coming Soon' }}"
