@@ -1,0 +1,46 @@
+title: "Maundy"
+description: "We are still working on our website. Stay tuned for updates!"
+baseurl: ""
+url: "https://christianwhocodes.github.io"
+markdown: kramdown
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Default values (will be overridden by GitHub Actions)
+seo:
+  title: "Maundy - Coming Soon"
+  description: "We are still working on our website. Stay tuned for updates!"
+  keywords: "maundy, bootstrap, template, coming soon"
+  author: "Christian Who Codes"
+
+hero:
+  title: "Coming Soon"
+  subtitle: "We are still working on our website. Stay tuned for updates!"
+  newsletter_text: "Subscribe now to get the latest updates!"
+
+footer:
+  copyright_text: "All Rights Reserved"
+  credits_text: "Designed by Christian Who Codes"
+
+contact:
+  email: "info@example.com"
+  phone: "+1 5589 55488 55"
+
+address:
+  street: "A108 Adam Street"
+  city: "New York, NY 535022"
+
+hours:
+  weekdays: "11AM - 23PM"
+  weekend: "Closed"
+
+social:
+  twitter: "#"
+  facebook: "#"
+  instagram: "#"
+  linkedin: "#"
+
+countdown_date: "2025/12/3"

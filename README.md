@@ -1,3 +1,3 @@
-# [BootstrapMade](https://github.com/christianwhocodes/bootstrapmade/)
+# [Coming Soon](https://github.com/christianwhocodes/coming-soon/)
 
-- Bootstrap-made templates
+- Bootstrap-made Coming Soon template
