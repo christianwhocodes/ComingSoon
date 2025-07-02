@@ -1,20 +1,16 @@
-title: "Maundy"
-description: "We are still working on our website. Stay tuned for updates!"
-baseurl: ""
-url: "https://christianwhocodes.github.io"
-markdown: kramdown
-
 # Build settings
+markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
 # Default values (will be overridden by GitHub Actions)
-seo:
-  title: "Maundy - Coming Soon"
-  description: "We are still working on our website. Stay tuned for updates!"
-  keywords: "maundy, bootstrap, template, coming soon"
-  author: "Christian Who Codes"
+title: "ComingSoon"
+description: "We are still working on our website. Stay tuned for updates!"
+keywords: "bootstrap, template, coming soon"
+author: "Christian Who Codes"
+url: "https://christianwhocodes.github.io"
+baseurl: ""
 
 hero:
   title: "Coming Soon"

@@ -10,17 +10,18 @@ This is a simple, customizable "Coming Soon" website built with [Jekyll](https:/
 
 ## 🛠️ Customizing Your Site
 
-You can change your site’s title, description, hero text, contact info, and social links by setting repository variables in GitHub:
+You can change your site’s title, description, hero text, contact info, social links, and more by setting repository variables in GitHub:
 
 1. Go to your repo’s **Settings** → **Secrets and variables** → **Actions** → **Variables**.
 2. Add or update these variables:
 
 | Variable Name        | Example Value                        | Purpose                              |
 |----------------------|--------------------------------------|--------------------------------------|
-| SEO_TITLE            | My Awesome Website                   | Site title (for SEO)                 |
-| SEO_DESCRIPTION      | The coolest website ever made!       | Site description (for SEO)           |
-| SEO_KEYWORDS         | awesome, website, coming soon        | Site keywords (for SEO)              |
-| SEO_AUTHOR           | Jane Doe                             | Site author (for SEO)                |
+| SITE_TITLE           | My Awesome Website                   | Site title (for SEO)                 |
+| SITE_DESCRIPTION     | The coolest website ever made!       | Site description (for SEO)           |
+| SITE_KEYWORDS        | awesome, website, coming soon        | Site keywords (for SEO)              |
+| SITE_AUTHOR          | Jane Doe                             | Site author (for SEO)                |
+| SITE_URL             | https://mycustomdomain.com           | Site URL (must match your GitHub Pages URL or custom domain) |
 | HERO_TITLE           | Welcome to Awesomeness!              | Main hero section title              |
 | HERO_SUBTITLE        | Where dreams come true!              | Main hero section subtitle           |
 | HERO_NEWSLETTER_TEXT | Subscribe for updates!               | Hero section newsletter text         |

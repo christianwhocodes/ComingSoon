@@ -3,9 +3,9 @@ name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -27,71 +27,63 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: "3.1"
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        
+
       - name: Create dynamic config
         run: |
           cat > _config.override.yml <<EOF
           # Dynamic configuration from GitHub Actions
-          
-          # SEO & Meta Tags
-          seo:
-            title: "${{ vars.SEO_TITLE || 'Maundy - Coming Soon' }}"
-            description: "${{ vars.SEO_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
-            keywords: "${{ vars.SEO_KEYWORDS || 'maundy, bootstrap, template, coming soon' }}"
-            author: "${{ vars.SEO_AUTHOR || 'Christian Who Codes' }}"
-          
-          # Hero Section Content
+          title: "${{ vars.SITE_TITLE || 'ComingSoon' }}"
+          description: "${{ vars.SITE_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
+          keywords: "${{ vars.SITE_KEYWORDS || 'maundy, bootstrap, template, coming soon' }}"
+          author: "${{ vars.SITE_AUTHOR || 'Christian Who Codes' }}"
+          url: "${{ vars.SITE_URL || 'https://christianwhocodes.github.io' }}"
+
           hero:
             title: "${{ vars.HERO_TITLE || 'Coming Soon' }}"
             subtitle: "${{ vars.HERO_SUBTITLE || 'We are still working on our website. Stay tuned for updates!' }}"
             newsletter_text: "${{ vars.HERO_NEWSLETTER_TEXT || 'Subscribe now to get the latest updates!' }}"
-          
-          # Footer Content
+
           footer:
             copyright_text: "${{ vars.FOOTER_COPYRIGHT || 'All Rights Reserved' }}"
             credits_text: "${{ vars.FOOTER_CREDITS || 'Designed by Christian Who Codes' }}"
-          
-          # Contact Information
+
           contact:
             email: "${{ vars.CONTACT_EMAIL || 'info@example.com' }}"
             phone: "${{ vars.CONTACT_PHONE || '+1 5589 55488 55' }}"
-          
-          # Address
+
           address:
             street: "${{ vars.ADDRESS_STREET || 'A108 Adam Street' }}"
             city: "${{ vars.ADDRESS_CITY || 'New York, NY 535022' }}"
-          
-          # Hours
+
           hours:
             weekdays: "${{ vars.HOURS_WEEKDAYS || '11AM - 23PM' }}"
             weekend: "${{ vars.HOURS_WEEKEND || 'Closed' }}"
-          
-          # Social Links
+
           social:
             twitter: "${{ vars.SOCIAL_TWITTER || '#' }}"
             facebook: "${{ vars.SOCIAL_FACEBOOK || '#' }}"
             instagram: "${{ vars.SOCIAL_INSTAGRAM || '#' }}"
             linkedin: "${{ vars.SOCIAL_LINKEDIN || '#' }}"
-          
-          # Countdown
+
           countdown_date: "${{ vars.COUNTDOWN_DATE || '2025/12/3' }}"
           EOF
-          
+
       - name: Build with Jekyll
+        # Build the Jekyll site using the main config (to preserve build settings) and the dynamic override config (to override site settings)
         run: bundle exec jekyll build --config _config.yml,_config.override.yml
         env:
           JEKYLL_ENV: production
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
