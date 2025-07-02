@@ -8,96 +8,104 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        bundler-cache: true
+      - name: Checkout
+        uses: actions/checkout@v4
         
-    - name: Setup Pages
-      id: pages
-      uses: actions/configure-pages@v4
-      
-    - name: Create dynamic config
-      run: |
-        cat > _config.override.yml <<EOF
-        # Dynamic configuration from GitHub Actions
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
         
-        # SEO & Meta Tags
-        seo:
-          title: "${{ vars.SEO_TITLE || 'Maundy - Coming Soon' }}"
-          description: "${{ vars.SEO_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
-          keywords: "${{ vars.SEO_KEYWORDS || 'maundy, bootstrap, template, coming soon' }}"
-          author: "${{ vars.SEO_AUTHOR || 'Christian Who Codes' }}"
-        
-        # Hero Section Content
-        hero:
-          title: "${{ vars.HERO_TITLE || 'Coming Soon' }}"
-          subtitle: "${{ vars.HERO_SUBTITLE || 'We are still working on our website. Stay tuned for updates!' }}"
-          newsletter_text: "${{ vars.HERO_NEWSLETTER_TEXT || 'Subscribe now to get the latest updates!' }}"
-        
-        # Footer Content
-        footer:
-          copyright_text: "${{ vars.FOOTER_COPYRIGHT || 'All Rights Reserved' }}"
-          credits_text: "${{ vars.FOOTER_CREDITS || 'Designed by Christian Who Codes' }}"
-        
-        # Contact Information
-        contact:
-          email: "${{ vars.CONTACT_EMAIL || 'info@example.com' }}"
-          phone: "${{ vars.CONTACT_PHONE || '+1 5589 55488 55' }}"
-        
-        # Address
-        address:
-          street: "${{ vars.ADDRESS_STREET || 'A108 Adam Street' }}"
-          city: "${{ vars.ADDRESS_CITY || 'New York, NY 535022' }}"
-        
-        # Hours
-        hours:
-          weekdays: "${{ vars.HOURS_WEEKDAYS || '11AM - 23PM' }}"
-          weekend: "${{ vars.HOURS_WEEKEND || 'Closed' }}"
-        
-        # Social Links
-        social:
-          twitter: "${{ vars.SOCIAL_TWITTER || '#' }}"
-          facebook: "${{ vars.SOCIAL_FACEBOOK || '#' }}"
-          instagram: "${{ vars.SOCIAL_INSTAGRAM || '#' }}"
-          linkedin: "${{ vars.SOCIAL_LINKEDIN || '#' }}"
-        
-        # Countdown
-        countdown_date: "${{ vars.COUNTDOWN_DATE || '2025/12/3' }}"
-        EOF
-        
-    - name: Build with Jekyll
-      run: |
-        bundle exec jekyll build --config _config.yml,_config.override.yml
-      env:
-        JEKYLL_ENV: production
-        
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      - name: Create dynamic config
+        run: |
+          cat > _config.override.yml <<EOF
+          # Dynamic configuration from GitHub Actions
+          
+          # SEO & Meta Tags
+          seo:
+            title: "${{ vars.SEO_TITLE || 'Maundy - Coming Soon' }}"
+            description: "${{ vars.SEO_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
+            keywords: "${{ vars.SEO_KEYWORDS || 'maundy, bootstrap, template, coming soon' }}"
+            author: "${{ vars.SEO_AUTHOR || 'Christian Who Codes' }}"
+          
+          # Hero Section Content
+          hero:
+            title: "${{ vars.HERO_TITLE || 'Coming Soon' }}"
+            subtitle: "${{ vars.HERO_SUBTITLE || 'We are still working on our website. Stay tuned for updates!' }}"
+            newsletter_text: "${{ vars.HERO_NEWSLETTER_TEXT || 'Subscribe now to get the latest updates!' }}"
+          
+          # Footer Content
+          footer:
+            copyright_text: "${{ vars.FOOTER_COPYRIGHT || 'All Rights Reserved' }}"
+            credits_text: "${{ vars.FOOTER_CREDITS || 'Designed by Christian Who Codes' }}"
+          
+          # Contact Information
+          contact:
+            email: "${{ vars.CONTACT_EMAIL || 'info@example.com' }}"
+            phone: "${{ vars.CONTACT_PHONE || '+1 5589 55488 55' }}"
+          
+          # Address
+          address:
+            street: "${{ vars.ADDRESS_STREET || 'A108 Adam Street' }}"
+            city: "${{ vars.ADDRESS_CITY || 'New York, NY 535022' }}"
+          
+          # Hours
+          hours:
+            weekdays: "${{ vars.HOURS_WEEKDAYS || '11AM - 23PM' }}"
+            weekend: "${{ vars.HOURS_WEEKEND || 'Closed' }}"
+          
+          # Social Links
+          social:
+            twitter: "${{ vars.SOCIAL_TWITTER || '#' }}"
+            facebook: "${{ vars.SOCIAL_FACEBOOK || '#' }}"
+            instagram: "${{ vars.SOCIAL_INSTAGRAM || '#' }}"
+            linkedin: "${{ vars.SOCIAL_LINKEDIN || '#' }}"
+          
+          # Countdown
+          countdown_date: "${{ vars.COUNTDOWN_DATE || '2025/12/3' }}"
+          EOF
+          
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --config _config.yml,_config.override.yml
+        env:
+          JEKYLL_ENV: production
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
+  # Deployment job
   deploy:
-    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
