@@ -8,6 +8,26 @@ This is a simple, customizable "Coming Soon" website built with [Jekyll](https:/
 - Clean, modular structure (layouts, includes, data)
 - Ready for GitHub Pages deployment
 
+## 🪄 Use This Template for Your Own "Coming Soon" Site
+
+You can easily create your own "Coming Soon" site by forking this repository and customizing it with your own content—no code changes required!
+
+**Steps:**
+1. **Fork this repository**  
+   Click the "Fork" button at the top right of this page to create your own copy under your GitHub account.
+
+2. **Clone your fork (optional)**  
+   If you want to preview or edit locally, clone your forked repo to your computer.
+
+3. **Customize via GitHub Actions Variables**  
+   Go to your fork’s **Settings** → **Secrets and variables** → **Actions** → **Variables** and set your site’s title, description, hero text, contact info, social links, countdown date, and more (see table below).
+
+4. **Deploy**  
+   Push to your `main` branch (or just save your variable changes). GitHub Actions will build and deploy your customized site automatically.
+
+5. **Update Anytime**  
+   You can update your site’s content at any time by changing the variables—no need to edit code or HTML!
+
 ## 🛠️ Customizing Your Site
 
 You can change your site’s title, description, hero text, contact info, social links, and more by setting repository variables in GitHub:
