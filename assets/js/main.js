@@ -1,132 +1,132 @@
+"use strict";
+
 /**
-* Template Name: Maundy
-* Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
-* Updated: Feb 01 2025 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Apply .scrolled class to the body as the page is scrolled down
+ */
+function toggleScrolled() {
+  const selectBody = document.querySelector("body");
+  const selectHeader = document.querySelector("#header");
+  if (
+    !selectHeader.classList.contains("scroll-up-sticky") &&
+    !selectHeader.classList.contains("sticky-top") &&
+    !selectHeader.classList.contains("fixed-top")
+  )
+    return;
+  window.scrollY > 100
+    ? selectBody.classList.add("scrolled")
+    : selectBody.classList.remove("scrolled");
+}
 
-(function() {
-  "use strict";
+document.addEventListener("scroll", toggleScrolled);
+window.addEventListener("load", toggleScrolled);
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
+/**
+ * Mobile nav toggle
+ */
+const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
+function mobileNavToogle() {
+  document.querySelector("body").classList.toggle("mobile-nav-active");
+  mobileNavToggleBtn.classList.toggle("bi-list");
+  mobileNavToggleBtn.classList.toggle("bi-x");
+}
+if (mobileNavToggleBtn) {
+  mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
+}
 
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+/**
+ * Hide mobile nav on same-page/hash links
+ */
+document.querySelectorAll("#navmenu a").forEach((navmenu) => {
+  navmenu.addEventListener("click", () => {
+    if (document.querySelector(".mobile-nav-active")) {
+      mobileNavToogle();
     }
-  }
-  scrollTop.addEventListener('click', (e) => {
+  });
+});
+
+/**
+ * Toggle mobile nav dropdowns
+ */
+document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
+  navmenu.addEventListener("click", function (e) {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    this.parentNode.classList.toggle("active");
+    this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
+    e.stopImmediatePropagation();
   });
+});
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+/**
+ * Preloader
+ */
+const preloader = document.querySelector("#preloader");
+if (preloader) {
+  window.addEventListener("load", () => {
+    preloader.remove();
+  });
+}
 
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+/**
+ * Scroll top button
+ */
+let scrollTop = document.querySelector(".scroll-top");
+
+function toggleScrollTop() {
+  if (scrollTop) {
+    window.scrollY > 100
+      ? scrollTop.classList.add("active")
+      : scrollTop.classList.remove("active");
   }
-  window.addEventListener('load', aosInit);
+}
+scrollTop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
-  /**
-   * Countdown timer
-   */
-  function updateCountDown(countDownItem) {
-    const timeleft = new Date(countDownItem.getAttribute('data-count')).getTime() - new Date().getTime();
+window.addEventListener("load", toggleScrollTop);
+document.addEventListener("scroll", toggleScrollTop);
 
-    const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+/**
+ * Animation on scroll function and init
+ */
+function aosInit() {
+  AOS.init({
+    duration: 600,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+  });
+}
+window.addEventListener("load", aosInit);
 
-    countDownItem.querySelector('.count-days').innerHTML = days;
-    countDownItem.querySelector('.count-hours').innerHTML = hours;
-    countDownItem.querySelector('.count-minutes').innerHTML = minutes;
-    countDownItem.querySelector('.count-seconds').innerHTML = seconds;
+/**
+ * Countdown timer
+ */
+function updateCountDown(countDownItem) {
+  const timeleft =
+    new Date(countDownItem.getAttribute("data-count")).getTime() -
+    new Date().getTime();
 
-  }
+  const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-  document.querySelectorAll('.countdown').forEach(function(countDownItem) {
+  countDownItem.querySelector(".count-days").innerHTML = days;
+  countDownItem.querySelector(".count-hours").innerHTML = hours;
+  countDownItem.querySelector(".count-minutes").innerHTML = minutes;
+  countDownItem.querySelector(".count-seconds").innerHTML = seconds;
+}
+
+document.querySelectorAll(".countdown").forEach(function (countDownItem) {
+  updateCountDown(countDownItem);
+  setInterval(function () {
     updateCountDown(countDownItem);
-    setInterval(function() {
-      updateCountDown(countDownItem);
-    }, 1000);
-  });
-
-})();
+  }, 1000);
+});

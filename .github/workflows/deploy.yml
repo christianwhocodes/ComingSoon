@@ -44,7 +44,7 @@ jobs:
           # Dynamic configuration from GitHub Actions
           title: "${{ vars.SITE_TITLE || 'ComingSoon' }}"
           description: "${{ vars.SITE_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
-          keywords: "${{ vars.SITE_KEYWORDS || 'maundy, bootstrap, template, coming soon' }}"
+          keywords: "${{ vars.SITE_KEYWORDS || 'bootstrap, template, coming soon' }}"
           author: "${{ vars.SITE_AUTHOR || 'Christian Who Codes' }}"
           url: "${{ vars.SITE_URL || 'https://comingsoon.christianwhocodes.space' }}"
 

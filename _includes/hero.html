@@ -5,7 +5,7 @@
         <h2>{{ site.hero.title }}<br /></h2>
         <p>{{ site.hero.subtitle }}</p>
       </div>
-      
+
       <div class="countdown d-flex justify-content-center" data-count="{{ site.countdown_date }}">
         <div>
           <h3 class="count-days">482</h3>
@@ -25,6 +25,7 @@
         </div>
       </div>
 
+      {% comment %}
       <div class="col-lg-5 hero-newsletter">
         <p>{{ site.hero.newsletter_text }}</p>
         <form action="forms/newsletter.php" method="post" class="php-email-form">
@@ -39,6 +40,7 @@
           </div>
         </form>
       </div>
+      {% endcomment %}
 
       <div class="social-links">
         <a href="{{ site.social.twitter }}"><i class="bi bi-twitter-x"></i></a>
