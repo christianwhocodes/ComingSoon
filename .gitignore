@@ -4,7 +4,6 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
-Gemfile.lock
 
 # OS generated files
 .DS_Store
@@ -24,7 +23,6 @@ Thumbs.db
 
 # Node modules (if using npm)
 node_modules/
-package-lock.json
 
 # Local environment variables
 .env

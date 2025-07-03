@@ -28,11 +28,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install npm dependencies
+        run: npm ci
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: false
+
+      - name: Add Linux platform to Gemfile.lock
+        run: bundle lock --add-platform x86_64-linux
+
+      - name: Install Bundler dependencies
+        run: bundle install --jobs 4
 
       - name: Setup Pages
         id: pages

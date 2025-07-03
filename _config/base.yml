@@ -8,3 +8,7 @@ plugins:
 exclude:
   - README.md
   - LICENSE
+  - package*.json
+
+include:
+  - node_modules

@@ -1,0 +1,28 @@
+{
+  "name": "comingsoon",
+  "version": "1.0.0",
+  "description": "This is a simple, customizable \"Coming Soon\" website built with [Jekyll](https://jekyllrb.com/) and automatically deployed to GitHub Pages using GitHub Actions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "jekyll serve --livereload --incremental --config _config/base.yml,_config/dev.yml",
+    "build": "jekyll build --config _config/base.yml,_config/dev.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianwhocodes/ComingSoon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/christianwhocodes/ComingSoon/issues"
+  },
+  "homepage": "https://github.com/christianwhocodes/ComingSoon#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1"
+  }
+}
