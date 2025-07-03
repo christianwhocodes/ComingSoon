@@ -56,10 +56,10 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
+  /* background image set in html head tag as internal style */
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  background: url(../img/bg.jpg) top center no-repeat;
   background-size: cover;
   position: relative;
 }

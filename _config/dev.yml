@@ -3,6 +3,13 @@ description: We are still working on our website. Stay tuned for updates!
 keywords: bootstrap, template, coming soon
 author: Christian Who Codes
 
+icons:
+  favicon_ico: assets/img/favicon.ico
+  apple_touch_icon: assets/img/apple-touch-icon.png
+
+background:
+  image: assets/img/bg.jpg
+
 hero:
   title: Something Revolutionary is Coming
   subtitle: We are still working on our website. Stay tuned for updates!

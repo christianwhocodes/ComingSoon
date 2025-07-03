@@ -48,6 +48,13 @@ jobs:
           keywords: ${{ vars.SITE_KEYWORDS || 'bootstrap, template, coming soon' }}
           author: ${{ vars.SITE_AUTHOR || 'Christian Who Codes' }}
 
+          icons:
+            favicon_ico: ${{ vars.ICONS_FAVICON_ICO || 'assets/img/favicon.ico' }}
+            apple_touch_icon: ${{ vars.ICONS_APPLE_TOUCH_ICON || 'assets/img/apple-touch-icon.png' }}
+
+          background:
+            image: ${{ vars.BACKGROUND_IMAGE || 'assets/img/bg.jpg' }}
+
           hero:
             title: ${{ vars.HERO_TITLE || 'Something Revolutionary is Coming' }}
             subtitle: ${{ vars.HERO_SUBTITLE || 'We are still working on our website. Stay tuned for updates!' }}
