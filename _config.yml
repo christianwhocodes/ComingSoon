@@ -5,37 +5,37 @@ plugins:
   - jekyll-sitemap
 
 # Default values (will be overridden by GitHub Actions)
-title: "Coming Soon"
-description: "We are still working on our website. Stay tuned for updates!"
-keywords: "bootstrap, template, coming soon"
-author: "Christian Who Codes"
+title: Coming Soon
+description: We are still working on our website. Stay tuned for updates!
+keywords: bootstrap, template, coming soon
+author: Christian Who Codes
 
 hero:
-  title: "Something Revolutionary is Coming"
-  subtitle: "We are still working on our website. Stay tuned for updates!"
-  newsletter_text: "Subscribe now to get the latest updates!"
+  title: Something Revolutionary is Coming
+  subtitle: We are still working on our website. Stay tuned for updates!
+  newsletter_text: Subscribe now to get the latest updates!
 
 footer:
-  copyright_text: "All Rights Reserved."
-  credits_text: "Crafted with ❤️ by <a href='https://github.com/christianwhocodes' target='_blank' rel='noopener'><em>Christian Who Codes</em></a>"
+  copyright_text: All Rights Reserved.
+  credits_text: Crafted with ❤️ by <a href="https://github.com/christianwhocodes" target="_blank" rel="noopener"><em>Christian Who Codes</em></a>
 
 contact:
-  email: "info@example.com"
-  phone: "+1 5589 55488 55"
+  email: info@example.com
+  phone: +1 5589 55488 55
 
 address:
-  street: "A108 Adam Street"
-  city: "New York, NY 535022"
+  street: A108 Adam Street
+  city: New York, NY 535022
 
 hours:
-  weekdays: "11AM - 23PM"
-  saturday: "11AM - 23PM"
-  sunday: "Closed"
+  weekdays: 11AM - 23PM
+  saturday: 11AM - 23PM
+  sunday: Closed
 
 social:
-  twitter: "#"
-  facebook: "#"
-  instagram: "#"
-  linkedin: "#"
+  twitter: #
+  facebook: #
+  instagram: #
+  linkedin: #
 
-countdown_date: "2025/12/3"
+countdown_date: 2025/12/3

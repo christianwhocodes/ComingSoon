@@ -35,31 +35,31 @@ You can change your site’s title, description, hero text, contact info, social
 1. Go to your repo’s **Settings** → **Secrets and variables** → **Actions** → **Variables**.
 2. Add or update these variables:
 
-| Variable Name        | Example Value                        | Purpose                              |
-|----------------------|--------------------------------------|--------------------------------------|
-| SITE_TITLE           | My Awesome Website                   | Site title (for SEO)                 |
-| SITE_DESCRIPTION     | The coolest website ever made!       | Site description (for SEO)           |
-| SITE_KEYWORDS        | awesome, website, coming soon        | Site keywords (for SEO)              |
-| SITE_AUTHOR          | Jane Doe                             | Site author (for SEO)                |
-| HERO_TITLE           | Welcome to Awesomeness!              | Main hero section title              |
-| HERO_SUBTITLE        | Where dreams come true!              | Main hero section subtitle           |
-| HERO_NEWSLETTER_TEXT | Subscribe for updates!               | Hero section newsletter text         |
-| FOOTER_COPYRIGHT     | All Rights Reserved                  | Footer copyright text                |
-| FOOTER_CREDITS       | Designed by Jane Doe                 | Footer credits text                  |
-| CONTACT_EMAIL        | hello@myawesome.com                  | Contact email                        |
-| CONTACT_PHONE        | +1 555 AWESOME                       | Contact phone                        |
-| ADDRESS_STREET       | 123 Main St                          | Address street                       |
-| ADDRESS_CITY         | Springfield, USA                     | Address city                         |
-| HOURS_WEEKDAYS       | 9AM - 5PM                            | Opening hours (weekdays)             |
-| HOURS_SATURDAY       | 9AM - 5PM                            | Opening hours (saturday)             |
-| HOURS_SUNDAY         | Closed                               | Opening hours (sunday)               |
-| SOCIAL_TWITTER       | https://twitter.com/myawesome        | Twitter link                         |
-| SOCIAL_FACEBOOK      | https://facebook.com/myawesome       | Facebook link                        |
-| SOCIAL_INSTAGRAM     | https://instagram.com/myawesome      | Instagram link                       |
-| SOCIAL_LINKEDIN      | https://linkedin.com/in/myawesome    | LinkedIn link                        |
-| COUNTDOWN_DATE       | 2025/12/3                            | Countdown date (YYYY/MM/DD)          |
+| Variable Name        | Purpose                              | Default Value                                                                 | Example Value                        |
+|----------------------|--------------------------------------|-------------------------------------------------------------------------------|--------------------------------------|
+| SITE_TITLE           | Site title (for SEO)                 | Coming Soon                                                                  | My Awesome Website                   |
+| SITE_DESCRIPTION     | Site description (for SEO)           | We are still working on our website. Stay tuned for updates!                 | The coolest website ever made!       |
+| SITE_KEYWORDS        | Site keywords (for SEO)              | bootstrap, template, coming soon                                             | awesome, website, coming soon        |
+| SITE_AUTHOR          | Site author (for SEO)                | Christian Who Codes                                                          | Jane Doe                             |
+| HERO_TITLE           | Main hero section title              | Something Revolutionary is Coming                                            | Welcome to Awesomeness!              |
+| HERO_SUBTITLE        | Main hero section subtitle           | We are still working on our website. Stay tuned for updates!                 | Where dreams come true!              |
+| HERO_NEWSLETTER_TEXT | Hero section newsletter text         | Subscribe now to get the latest updates!                                     | Subscribe for updates!               |
+| FOOTER_COPYRIGHT     | Footer copyright text                | All rights reserved.                                                         | All Rights Reserved                  |
+| FOOTER_CREDITS       | Footer credits text                  | Crafted with ❤️ by <a href="https://github.com/christianwhocodes" target="_blank" rel="noopener"><em>Christian Who Codes</em></a> | Designed by Jane Doe                 |
+| CONTACT_EMAIL        | Contact email                        | (none)                                                                       | hello@myawesome.com                  |
+| CONTACT_PHONE        | Contact phone                        | (none)                                                                       | +1 555 AWESOME                       |
+| ADDRESS_STREET       | Address street                       | (none)                                                                       | 123 Main St                          |
+| ADDRESS_CITY         | Address city                         | (none)                                                                       | Springfield, USA                     |
+| HOURS_WEEKDAYS       | Opening hours (weekdays)             | (none)                                                                       | 9AM - 5PM                            |
+| HOURS_SATURDAY       | Opening hours (saturday)             | (none)                                                                       | 9AM - 5PM                            |
+| HOURS_SUNDAY         | Opening hours (sunday)               | (none)                                                                       | Closed                               |
+| SOCIAL_TWITTER       | Twitter link                         | (none)                                                                       | https://twitter.com/myawesome        |
+| SOCIAL_FACEBOOK      | Facebook link                        | (none)                                                                       | https://facebook.com/myawesome       |
+| SOCIAL_INSTAGRAM     | Instagram link                       | (none)                                                                       | https://instagram.com/myawesome      |
+| SOCIAL_LINKEDIN      | LinkedIn link                        | (none)                                                                       | https://linkedin.com/in/myawesome    |
+| COUNTDOWN_DATE       | Countdown date (YYYY/MM/DD)          | (none)                                                                       | 2025/12/3                            |
 
-If a variable is not set, a default value will be used.
+If a variable is not set, a default value will be used where shown above.
 
 ## ⚙️ GitHub Pages Configuration
 
