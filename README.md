@@ -1,4 +1,4 @@
-# [ComingSoon Jekyll Site](https://github.com/christianwhocodes/ComingSoon) 🚀
+# [Coming Soon](https://github.com/christianwhocodes/ComingSoon) 🚀
 
 This is a simple, customizable "Coming Soon" website built with [Jekyll](https://jekyllrb.com/) and automatically deployed to GitHub Pages using GitHub Actions.
 
@@ -40,16 +40,16 @@ You can change your site’s title, description, hero text, contact info, social
 | SITE_TITLE           | Site title (for SEO)                 | Coming Soon                                                                  | My Awesome Website                   |
 | SITE_DESCRIPTION     | Site description (for SEO)           | We are still working on our website. Stay tuned for updates!                 | The coolest website ever made!       |
 | SITE_KEYWORDS        | Site keywords (for SEO)              | bootstrap, template, coming soon                                             | awesome, website, coming soon        |
-| SITE_AUTHOR          | Site author (for SEO)                | Christian Who Codes                                                          | Jane Doe                             |
+| SITE_AUTHOR          | Site author (for SEO)                | Christian Who Codes                                                          | Kevin Wakhisi                             |
 | HERO_TITLE           | Main hero section title              | Something Revolutionary is Coming                                            | Welcome to Awesomeness!              |
 | HERO_SUBTITLE        | Main hero section subtitle           | We are still working on our website. Stay tuned for updates!                 | Where dreams come true!              |
 | HERO_NEWSLETTER_TEXT | Hero section newsletter text         | Subscribe now to get the latest updates!                                     | Subscribe for updates!               |
 | FOOTER_COPYRIGHT     | Footer copyright text                | All rights reserved.                                                         | All Rights Reserved                  |
 | FOOTER_CREDITS       | Footer credits text                  | Crafted with ❤️ by <a href="https://github.com/christianwhocodes" target="_blank" rel="noopener"><em>Christian Who Codes</em></a> | Designed by Jane Doe                 |
 | CONTACT_EMAIL        | Contact email                        | (none)                                                                       | hello@myawesome.com                  |
-| CONTACT_PHONE        | Contact phone                        | (none)                                                                       | +1 555 AWESOME                       |
-| ADDRESS_STREET       | Address street                       | (none)                                                                       | 123 Main St                          |
-| ADDRESS_CITY         | Address city                         | (none)                                                                       | Springfield, USA                     |
+| CONTACT_PHONE        | Contact phone                        | (none)                                                                       | +254 777 AWESOME                       |
+| ADDRESS_STREET       | Address street                       | (none)                                                                       | 00600 Ngara Rd                          |
+| ADDRESS_CITY         | Address city                         | (none)                                                                       | Nairobi, Kenya                     |
 | HOURS_WEEKDAYS       | Opening hours (weekdays)             | (none)                                                                       | 9AM - 5PM                            |
 | HOURS_SATURDAY       | Opening hours (saturday)             | (none)                                                                       | 9AM - 5PM                            |
 | HOURS_SUNDAY         | Opening hours (sunday)               | (none)                                                                       | Closed                               |
