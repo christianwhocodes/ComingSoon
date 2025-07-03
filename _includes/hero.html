@@ -2,52 +2,57 @@
   <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h2>{{ site.hero.title }}<br /></h2>
+        <h2>
+          {{ site.hero.title }}
+          <br />
+        </h2>
         <p>{{ site.hero.subtitle }}</p>
       </div>
-
-      <div class="countdown d-flex justify-content-center" data-count="{{ site.countdown_date }}">
-        <div>
-          <h3 class="count-days">482</h3>
-          <h4>Days</h4>
+      {% if site.countdown_date %}
+        <div class="countdown d-flex justify-content-center"
+             data-count="{{ site.countdown_date }}">
+          <div>
+            <h3 class="count-days">482</h3>
+            <h4>Days</h4>
+          </div>
+          <div>
+            <h3 class="count-hours">6</h3>
+            <h4>Hours</h4>
+          </div>
+          <div>
+            <h3 class="count-minutes">49</h3>
+            <h4>Minutes</h4>
+          </div>
+          <div>
+            <h3 class="count-seconds">21</h3>
+            <h4>Seconds</h4>
+          </div>
         </div>
-        <div>
-          <h3 class="count-hours">6</h3>
-          <h4>Hours</h4>
-        </div>
-        <div>
-          <h3 class="count-minutes">49</h3>
-          <h4>Minutes</h4>
-        </div>
-        <div>
-          <h3 class="count-seconds">21</h3>
-          <h4>Seconds</h4>
-        </div>
-      </div>
-
+      {% endif %}
       {% comment %}
-      <div class="col-lg-5 hero-newsletter">
-        <p>{{ site.hero.newsletter_text }}</p>
-        <form action="forms/newsletter.php" method="post" class="php-email-form">
-          <div class="newsletter-form">
-            <input type="email" name="email" placeholder="Your email address" />
-            <input type="submit" value="Subscribe" />
-          </div>
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">
-            Your subscription request has been sent. Thank you!
-          </div>
-        </form>
-      </div>
+        <div class="col-lg-5 hero-newsletter">
+          <p>{{ site.hero.newsletter_text }}</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form">
+              <input type="email" name="email" placeholder="Your email address" />
+              <input type="submit" value="Subscribe" />
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">
+              Your subscription request has been sent. Thank you!
+            </div>
+          </form>
+        </div>
       {% endcomment %}
-
-      <div class="social-links">
-        <a href="{{ site.social.twitter }}"><i class="bi bi-twitter-x"></i></a>
-        <a href="{{ site.social.facebook }}"><i class="bi bi-facebook"></i></a>
-        <a href="{{ site.social.instagram }}"><i class="bi bi-instagram"></i></a>
-        <a href="{{ site.social.linkedin }}"><i class="bi bi-linkedin"></i></a>
-      </div>
+      {% if site.social.twitter or site.social.facebook or  site.social.instagram or site.social.linkedin %}
+        <div class="social-links">
+          {% if site.social.twitter %}<a href="{{ site.social.twitter }}"><i class="bi bi-twitter-x"></i></a>{% endif %}
+          {% if site.social.facebook %}<a href="{{ site.social.facebook }}"><i class="bi bi-facebook"></i></a>{% endif %}
+          {% if site.social.instagram %}<a href="{{ site.social.instagram }}"><i class="bi bi-instagram"></i></a>{% endif %}
+          {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}"><i class="bi bi-linkedin"></i></a>{% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>

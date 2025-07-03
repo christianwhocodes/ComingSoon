@@ -1,46 +1,75 @@
 <footer id="footer" class="footer transparent-background">
   <div class="container">
     <div class="row gy-3">
-      <div class="col-lg-3 col-md-6 d-flex">
-        <i class="bi bi-geo-alt icon"></i>
-        <div class="address">
-          <h4>Address</h4>
-          <p>{{ site.address.street }}</p>
-          <p>{{ site.address.city }}</p>
+      {% if site.address.street or site.address.city %}
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Address</h4>
+            {% if site.address.street %}<p>{{ site.address.street }}</p>{% endif %}
+            {% if site.address.city %}<p>{{ site.address.city }}</p>{% endif %}
+          </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex">
-        <i class="bi bi-telephone icon"></i>
-        <div>
-          <h4>Contact</h4>
-          <p>
-            <strong>Phone:</strong> <span>{{ site.contact.phone }}</span>
-            <br />
-            <strong>Email:</strong> <span>{{ site.contact.email }}</span>
-            <br />
-          </p>
+      {% endif %}
+      {% if site.contact.phone or site.contact.email %}
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              {% if site.contact.phone %}
+                <strong>Phone:</strong> <span>{{ site.contact.phone }}</span>
+                <br />
+              {% endif %}
+              {% if site.contact.email %}
+                <strong>Email:</strong> <span>{{ site.contact.email }}</span>
+                <br />
+              {% endif %}
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex">
-        <i class="bi bi-clock icon"></i>
-        <div>
-          <h4>Opening Hours</h4>
-          <p>
-            <strong>Mon-Sat:</strong> <span>{{ site.hours.weekdays }}</span>
-            <br />
-            <strong>Sunday:</strong> <span>{{ site.hours.weekend }}</span>
-          </p>
+      {% endif %}
+      {% if site.hours.weekdays or site.hours.saturday or site.hours.sunday %}
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              {% if site.hours.weekdays %}
+                <strong>Mon-Fri:</strong> <span>{{ site.hours.weekdays }}</span>
+                <br />
+              {% endif %}
+              {% if site.hours.saturday %}
+                <strong>Saturday:</strong> <span>{{ site.hours.saturday }}</span>
+                <br />
+              {% endif %}
+              {% if site.hours.sunday %}
+                <strong>Sunday:</strong> <span>{{ site.hours.sunday }}</span>
+                <br />
+              {% endif %}
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <h4>Follow Us</h4>
-        <div class="social-links d-flex">
-          <a href="{{ site.social.twitter }}" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="{{ site.social.facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="{{ site.social.instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="{{ site.social.linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      {% endif %}
+      {% if site.social.twitter or site.social.facebook or  site.social.instagram or site.social.linkedin %}
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            {% if site.social.twitter %}
+              <a href="{{ site.social.twitter }}" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            {% endif %}
+            {% if site.social.facebook %}
+              <a href="{{ site.social.facebook }}" class="facebook"><i class="bi bi-facebook"></i></a>
+            {% endif %}
+            {% if site.social.instagram %}
+              <a href="{{ site.social.instagram }}" class="instagram"><i class="bi bi-instagram"></i></a>
+            {% endif %}
+            {% if site.social.linkedin %}
+              <a href="{{ site.social.linkedin }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            {% endif %}
+          </div>
         </div>
-      </div>
+      {% endif %}
     </div>
   </div>
   <div class="container copyright text-center mt-4">
@@ -49,6 +78,6 @@
       <strong class="px-1 sitename">{{ site.title }}</strong>
       <span>{{ site.footer.copyright_text }}</span>
     </p>
-    {% if site.footer.credits_text %}<div class="credits">{{ site.footer.credits_text }}</div>{% endif %}
+    <div class="credits">{{ site.footer.credits_text }}</div>
   </div>
 </footer>

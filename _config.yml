@@ -5,21 +5,19 @@ plugins:
   - jekyll-sitemap
 
 # Default values (will be overridden by GitHub Actions)
-title: "ComingSoon"
+title: "Coming Soon"
 description: "We are still working on our website. Stay tuned for updates!"
 keywords: "bootstrap, template, coming soon"
 author: "Christian Who Codes"
-url: "https://comingsoon.christianwhocodes.space"
-baseurl: ""
 
 hero:
-  title: "Coming Soon"
+  title: "Something Revolutionary is Coming"
   subtitle: "We are still working on our website. Stay tuned for updates!"
   newsletter_text: "Subscribe now to get the latest updates!"
 
 footer:
-  copyright_text: "All Rights Reserved"
-  credits_text: "Designed by Christian Who Codes"
+  copyright_text: "All Rights Reserved."
+  credits_text: "Crafted with ❤️ by <a href='https://github.com/christianwhocodes' target='_blank' rel='noopener'><em>Christian Who Codes</em></a>"
 
 contact:
   email: "info@example.com"
@@ -31,7 +29,8 @@ address:
 
 hours:
   weekdays: "11AM - 23PM"
-  weekend: "Closed"
+  saturday: "11AM - 23PM"
+  sunday: "Closed"
 
 social:
   twitter: "#"

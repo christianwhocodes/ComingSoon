@@ -41,7 +41,6 @@ You can change your site’s title, description, hero text, contact info, social
 | SITE_DESCRIPTION     | The coolest website ever made!       | Site description (for SEO)           |
 | SITE_KEYWORDS        | awesome, website, coming soon        | Site keywords (for SEO)              |
 | SITE_AUTHOR          | Jane Doe                             | Site author (for SEO)                |
-| SITE_URL             | https://mycustomdomain.com           | Site URL (must match your GitHub Pages URL or custom domain) |
 | HERO_TITLE           | Welcome to Awesomeness!              | Main hero section title              |
 | HERO_SUBTITLE        | Where dreams come true!              | Main hero section subtitle           |
 | HERO_NEWSLETTER_TEXT | Subscribe for updates!               | Hero section newsletter text         |
@@ -52,7 +51,8 @@ You can change your site’s title, description, hero text, contact info, social
 | ADDRESS_STREET       | 123 Main St                          | Address street                       |
 | ADDRESS_CITY         | Springfield, USA                     | Address city                         |
 | HOURS_WEEKDAYS       | 9AM - 5PM                            | Opening hours (weekdays)             |
-| HOURS_WEEKEND        | Closed                               | Opening hours (weekend)              |
+| HOURS_SATURDAY       | 9AM - 5PM                            | Opening hours (saturday)             |
+| HOURS_SUNDAY         | Closed                               | Opening hours (sunday)               |
 | SOCIAL_TWITTER       | https://twitter.com/myawesome        | Twitter link                         |
 | SOCIAL_FACEBOOK      | https://facebook.com/myawesome       | Facebook link                        |
 | SOCIAL_INSTAGRAM     | https://instagram.com/myawesome      | Instagram link                       |
