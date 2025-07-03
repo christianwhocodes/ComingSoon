@@ -40,7 +40,7 @@ jobs:
 
       - name: Create dynamic config
         run: |
-          cat > _config.override.yml <<EOF
+          cat > _config/prod.yml <<EOF
           ---
           # Dynamic configuration from GitHub Actions
           title: ${{ vars.SITE_TITLE || 'Coming Soon' }}
@@ -80,8 +80,7 @@ jobs:
           EOF
 
       - name: Build with Jekyll
-        # Build the Jekyll site using the main config (to preserve build settings) and the dynamic override config (to override site settings)
-        run: bundle exec jekyll build --config _config.yml,_config.override.yml
+        run: bundle exec jekyll build --config _config/base.yml,_config/prod.yml
         env:
           JEKYLL_ENV: production
 

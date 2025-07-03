@@ -1,10 +1,3 @@
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-# Default values (will be overridden by GitHub Actions)
 title: Coming Soon
 description: We are still working on our website. Stay tuned for updates!
 keywords: bootstrap, template, coming soon
@@ -33,9 +26,9 @@ hours:
   sunday: Closed
 
 social:
-  twitter: #
-  facebook: #
-  instagram: #
-  linkedin: #
+  twitter: https://twitter.com/myawesome
+  facebook: https://facebook.com/myawesome
+  instagram: https://instagram.com/myawesome
+  linkedin: https://linkedin.com/in/myawesome
 
 countdown_date: 2025/12/3

@@ -127,18 +127,12 @@ gem install jekyll bundler
 bundle install
 
 # Every time you want to test
-bundle exec jekyll serve
-```
-
-To use a different port (e.g., 3000):
-
-```sh
-bundle exec jekyll serve --port 3000
+bundle exec jekyll serve --incremental --config _config/base.yml,_config/dev.yml
 ```
 
 #### Step 3: Open your browser
 
-Visit [http://localhost:4000](http://localhost:4000) (or your chosen port).
+Visit [http://localhost:4000](http://localhost:4000)
 
 ---
 
