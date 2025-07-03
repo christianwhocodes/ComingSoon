@@ -54,7 +54,7 @@ jobs:
             newsletter_text: "${{ vars.HERO_NEWSLETTER_TEXT }}"
 
           footer:
-            copyright_text: "${{ vars.FOOTER_COPYRIGHT }}"
+            copyright_text: "${{ vars.FOOTER_COPYRIGHT || 'All rights reserved.' }}"
             credits_text: "${{ vars.FOOTER_CREDITS }}"
 
           contact:
