@@ -9,8 +9,12 @@ icons:
   android_chrome_icon: assets/img/android-chrome-192x192.png
   msapplication_tile_icon: assets/img/mstile-150x150.png
 
-background:
-  image: assets/img/bg.jpg
+images:
+  bg: assets/img/bg.jpg
+  logo: assets/img/logo-512x512.png
+
+header:
+  logo: image
 
 hero:
   title: Coming Soon!

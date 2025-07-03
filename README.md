@@ -15,6 +15,7 @@ This is a simple, customizable "Coming Soon" website built with [Jekyll](https:/
 You can easily create your own "Coming Soon" site by forking this repository and customizing it with your own content—no code changes required!
 
 **Steps:**
+
 1. **Fork this repository**  
    Click the "Fork" button at the top right of this page to create your own copy under your GitHub account.
 
@@ -34,34 +35,36 @@ You can change your site's title, description, hero text, contact info, social l
 1. Go to your repo's **Settings** → **Secrets and variables** → **Actions** → **Variables**.
 2. Add or update these variables:
 
-| Variable Name                  | Purpose                              | Default Value                                                                 | Example Value                        |
-|--------------------------------|--------------------------------------|-------------------------------------------------------------------------------|--------------------------------------|
-| SITE_TITLE                     | Site title (for SEO)                 | Coming Soon                                                                  | My Awesome Website                   |
-| SITE_DESCRIPTION               | Site description (for SEO)           | We are still working on our website. Stay tuned for updates!                 | The coolest website ever made!       |
-| SITE_KEYWORDS                  | Site keywords (for SEO)              | bootstrap, template, coming soon                                             | awesome, website, coming soon        |
-| SITE_AUTHOR                    | Site author (for SEO)                | Christian Who Codes                                                          | Kevin Wakhisi                        |
-| ICONS_FAVICON_ICO              | Path or URL to favicon.ico           | assets/img/favicon-32x32.ico                                                 | https://example.com/favicon.ico      |
-| ICONS_APPLE_TOUCH_180          | Path or URL to Apple touch icon      | assets/img/apple-touch-180x180.png                                           | https://example.com/apple-touch-icon.png |
-| ICONS_ANDROID_CHROME_192       | Path or URL to Android Chrome icon   | assets/img/android-chrome-192x192.png                                        | https://example.com/android-chrome-192x192.png |
-| ICONS_MSAPPLICATION_TILE_150   | Path or URL to MS tile icon          | assets/img/mstile-150x150.png                                                | https://example.com/mstile-150x150.png |
-| BACKGROUND_IMAGE               | Path or URL to background image      | assets/img/bg.jpg                                                            | https://example.com/bg.jpg           |
-| HERO_TITLE                     | Main hero section title              | Coming Soon!                                                                 | Welcome to Awesomeness!              |
-| HERO_SUBTITLE                  | Main hero section subtitle           | We are still working on our website. Stay tuned for updates!                 | Where dreams come true!              |
-| HERO_NEWSLETTER_TEXT           | Hero section newsletter text         | Subscribe now to get the latest updates!                                     | Subscribe for updates!               |
-| FOOTER_COPYRIGHT               | Footer copyright text                | All rights reserved.                                                         | All Rights Reserved                  |
-| FOOTER_CREDITS                 | Footer credits text                  | Crafted with ❤️ by <a href="https://github.com/christianwhocodes" target="_blank" rel="noopener"><em>Christian Who Codes</em></a> | Designed by Jane Doe                 |
-| CONTACT_EMAIL                  | Contact email                        | (none)                                                                       | hello@myawesome.com                  |
-| CONTACT_PHONE                  | Contact phone                        | (none)                                                                       | +254 777 AWESOME                     |
-| ADDRESS_STREET                 | Address street                       | (none)                                                                       | 00600 Ngara Rd                       |
-| ADDRESS_CITY                   | Address city                         | (none)                                                                       | Nairobi, Kenya                       |
-| HOURS_WEEKDAYS                 | Opening hours (weekdays)             | (none)                                                                       | 9AM - 5PM                            |
-| HOURS_SATURDAY                 | Opening hours (saturday)             | (none)                                                                       | 9AM - 5PM                            |
-| HOURS_SUNDAY                   | Opening hours (sunday)               | (none)                                                                       | Closed                               |
-| SOCIAL_TWITTER                 | Twitter link                         | (none)                                                                       | https://twitter.com/myawesome        |
-| SOCIAL_FACEBOOK                | Facebook link                        | (none)                                                                       | https://facebook.com/myawesome       |
-| SOCIAL_INSTAGRAM               | Instagram link                       | (none)                                                                       | https://instagram.com/myawesome      |
-| SOCIAL_LINKEDIN                | LinkedIn link                        | (none)                                                                       | https://linkedin.com/in/myawesome    |
-| COUNTDOWN_DATE                 | Countdown date (YYYY/MM/DD)          | (none)                                                                       | 2025/12/3                            |
+| Variable Name                | Purpose                                                                                                                  | Default Value                                                                                                                     | Example Value                                  |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| SITE_TITLE                   | Site title (for SEO)                                                                                                     | Coming Soon                                                                                                                       | My Awesome Website                             |
+| SITE_DESCRIPTION             | Site description (for SEO)                                                                                               | We are still working on our website. Stay tuned for updates!                                                                      | The coolest website ever made!                 |
+| SITE_KEYWORDS                | Site keywords (for SEO)                                                                                                  | bootstrap, template, coming soon                                                                                                  | awesome, website, coming soon                  |
+| SITE_AUTHOR                  | Site author (for SEO)                                                                                                    | Christian Who Codes                                                                                                               | Kevin Wakhisi                                  |
+| ICONS_FAVICON_ICO            | Path or URL to favicon.ico                                                                                               | assets/img/favicon-32x32.ico                                                                                                      | https://example.com/favicon.ico                |
+| ICONS_APPLE_TOUCH_180        | Path or URL to Apple touch icon                                                                                          | assets/img/apple-touch-180x180.png                                                                                                | https://example.com/apple-touch-icon.png       |
+| ICONS_ANDROID_CHROME_192     | Path or URL to Android Chrome icon                                                                                       | assets/img/android-chrome-192x192.png                                                                                             | https://example.com/android-chrome-192x192.png |
+| ICONS_MSAPPLICATION_TILE_150 | Path or URL to MS tile icon                                                                                              | assets/img/mstile-150x150.png                                                                                                     | https://example.com/mstile-150x150.png         |
+| IMAGES_BG                    | Path or URL to background image                                                                                          | assets/img/bg.jpg                                                                                                                 | https://example.com/bg.jpg                     |
+| IMAGES_LOGO                  | Path or URL to logo image                                                                                                 | assets/img/logo-512x512.png                                                                                                       | https://example.com/logo.png                   |
+| HEADER_LOGO                  | Leave unset to show the site title (SITE_TITLE). Set to `image` to show the logo (IMAGES_LOGO). | image                                                                                                                            | image                                          |
+| HERO_TITLE                   | Main hero section title                                                                                                  | Coming Soon!                                                                                                                      | Welcome to Awesomeness!                        |
+| HERO_SUBTITLE                | Main hero section subtitle                                                                                               | We are still working on our website. Stay tuned for updates!                                                                      | Where dreams come true!                        |
+| HERO_NEWSLETTER_TEXT         | Hero section newsletter text                                                                                             | Subscribe now to get the latest updates!                                                                                          | Subscribe for updates!                         |
+| FOOTER_COPYRIGHT             | Footer copyright text                                                                                                    | All rights reserved.                                                                                                              | All Rights Reserved                            |
+| FOOTER_CREDITS               | Footer credits text                                                                                                      | Crafted with ❤️ by <a href="https://github.com/christianwhocodes" target="_blank" rel="noopener"><em>Christian Who Codes</em></a> | Designed by Jane Doe                           |
+| CONTACT_EMAIL                | Contact email                                                                                                            | (none)                                                                                                                            | hello@myawesome.com                            |
+| CONTACT_PHONE                | Contact phone                                                                                                            | (none)                                                                                                                            | +254 777 AWESOME                               |
+| ADDRESS_STREET               | Address street                                                                                                           | (none)                                                                                                                            | 00600 Ngara Rd                                 |
+| ADDRESS_CITY                 | Address city                                                                                                             | (none)                                                                                                                            | Nairobi, Kenya                                 |
+| HOURS_WEEKDAYS               | Opening hours (weekdays)                                                                                                 | (none)                                                                                                                            | 9AM - 5PM                                      |
+| HOURS_SATURDAY               | Opening hours (Saturday)                                                                                                 | (none)                                                                                                                            | 9AM - 5PM                                      |
+| HOURS_SUNDAY                 | Opening hours (Sunday)                                                                                                   | (none)                                                                                                                            | Closed                                         |
+| SOCIAL_TWITTER               | Twitter link                                                                                                             | (none)                                                                                                                            | https://twitter.com/myawesome                  |
+| SOCIAL_FACEBOOK              | Facebook link                                                                                                            | (none)                                                                                                                            | https://facebook.com/myawesome                 |
+| SOCIAL_INSTAGRAM             | Instagram link                                                                                                           | (none)                                                                                                                            | https://instagram.com/myawesome                |
+| SOCIAL_LINKEDIN              | LinkedIn link                                                                                                            | (none)                                                                                                                            | https://linkedin.com/in/myawesome              |
+| COUNTDOWN_DATE               | Countdown date (YYYY/MM/DD)                                                                                              | (none)                                                                                                                            | 2025/12/3                                      |
 
 If a variable is not set, a default value will be used where shown above.
 
@@ -77,13 +80,14 @@ Before your site can be published, make sure to configure GitHub Pages correctly
    Your repository must be **public** for GitHub Pages to deploy.
 
 2. **Set Pages Source:**  
-   Go to your repo's **Settings** → **Pages**.  
+   Go to your repo's **Settings** → **Pages**.
+
    - Under **Build and deployment**, set **Source** to **GitHub Actions** (not from a branch).
 
 3. **First Deployment:**  
    After pushing to `main`, the GitHub Actions workflow will build and deploy your site.  
    The published site URL will be shown in the Pages settings and in the Actions logs.
 
-4. **Troubleshooting:**  
+4. **Troubleshooting:**
    - If you see a 404, wait a few minutes for GitHub Pages to process the deployment.
    - Ensure your workflow completed successfully and the repo is public.
