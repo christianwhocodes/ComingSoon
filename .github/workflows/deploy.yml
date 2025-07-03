@@ -42,40 +42,40 @@ jobs:
         run: |
           cat > _config.override.yml <<EOF
           # Dynamic configuration from GitHub Actions
-          title: "${{ vars.SITE_TITLE || 'ComingSoon' }}"
-          description: "${{ vars.SITE_DESCRIPTION || 'We are still working on our website. Stay tuned for updates!' }}"
-          keywords: "${{ vars.SITE_KEYWORDS || 'bootstrap, template, coming soon' }}"
-          author: "${{ vars.SITE_AUTHOR || 'Christian Who Codes' }}"
-          url: "${{ vars.SITE_URL || 'https://comingsoon.christianwhocodes.space' }}"
+          title: "${{ vars.SITE_TITLE }}"
+          description: "${{ vars.SITE_DESCRIPTION }}"
+          keywords: "${{ vars.SITE_KEYWORDS }}"
+          author: "${{ vars.SITE_AUTHOR }}"
+          url: "${{ vars.SITE_URL }}"
 
           hero:
-            title: "${{ vars.HERO_TITLE || 'Coming Soon' }}"
-            subtitle: "${{ vars.HERO_SUBTITLE || 'We are still working on our website. Stay tuned for updates!' }}"
-            newsletter_text: "${{ vars.HERO_NEWSLETTER_TEXT || 'Subscribe now to get the latest updates!' }}"
+            title: "${{ vars.HERO_TITLE || vars.SITE_TITLE }}"
+            subtitle: "${{ vars.HERO_SUBTITLE || vars.SITE_DESCRIPTION }}"
+            newsletter_text: "${{ vars.HERO_NEWSLETTER_TEXT }}"
 
           footer:
-            copyright_text: "${{ vars.FOOTER_COPYRIGHT || 'All Rights Reserved' }}"
-            credits_text: "${{ vars.FOOTER_CREDITS || 'Designed by Christian Who Codes' }}"
+            copyright_text: "${{ vars.FOOTER_COPYRIGHT }}"
+            credits_text: "${{ vars.FOOTER_CREDITS }}"
 
           contact:
-            email: "${{ vars.CONTACT_EMAIL || 'info@example.com' }}"
-            phone: "${{ vars.CONTACT_PHONE || '+1 5589 55488 55' }}"
+            email: "${{ vars.CONTACT_EMAIL }}"
+            phone: "${{ vars.CONTACT_PHONE }}"
 
           address:
-            street: "${{ vars.ADDRESS_STREET || 'A108 Adam Street' }}"
-            city: "${{ vars.ADDRESS_CITY || 'New York, NY 535022' }}"
+            street: "${{ vars.ADDRESS_STREET }}"
+            city: "${{ vars.ADDRESS_CITY }}"
 
           hours:
-            weekdays: "${{ vars.HOURS_WEEKDAYS || '11AM - 23PM' }}"
-            weekend: "${{ vars.HOURS_WEEKEND || 'Closed' }}"
+            weekdays: "${{ vars.HOURS_WEEKDAYS }}"
+            weekend: "${{ vars.HOURS_WEEKEND }}"
 
           social:
-            twitter: "${{ vars.SOCIAL_TWITTER || '#' }}"
-            facebook: "${{ vars.SOCIAL_FACEBOOK || '#' }}"
-            instagram: "${{ vars.SOCIAL_INSTAGRAM || '#' }}"
-            linkedin: "${{ vars.SOCIAL_LINKEDIN || '#' }}"
+            twitter: "${{ vars.SOCIAL_TWITTER }}"
+            facebook: "${{ vars.SOCIAL_FACEBOOK }}"
+            instagram: "${{ vars.SOCIAL_INSTAGRAM }}"
+            linkedin: "${{ vars.SOCIAL_LINKEDIN }}"
 
-          countdown_date: "${{ vars.COUNTDOWN_DATE || '2025/12/3' }}"
+          countdown_date: "${{ vars.COUNTDOWN_DATE }}"
           EOF
 
       - name: Build with Jekyll
