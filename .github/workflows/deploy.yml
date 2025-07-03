@@ -56,7 +56,7 @@ jobs:
             image: ${{ vars.BACKGROUND_IMAGE || 'assets/img/bg.jpg' }}
 
           hero:
-            title: ${{ vars.HERO_TITLE || 'Something Revolutionary is Coming' }}
+            title: ${{ vars.HERO_TITLE || 'Coming Soon!' }}
             subtitle: ${{ vars.HERO_SUBTITLE || 'We are still working on our website. Stay tuned for updates!' }}
             newsletter_text: ${{ vars.HERO_NEWSLETTER_TEXT || 'Subscribe now to get the latest updates!' }}
 
