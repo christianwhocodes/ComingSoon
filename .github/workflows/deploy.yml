@@ -63,7 +63,7 @@ jobs:
           author: ${{ vars.SITE_AUTHOR || 'Christian Who Codes' }}
 
           icons:
-            favicon_ico: ${{ vars.ICONS_FAVICON_ICO || 'assets/img/favicon-32x32.ico' }}
+            favicon_ico: ${{ vars.ICONS_FAVICON_ICO || 'assets/img/favicon.ico' }}
             apple_touch_icon: ${{ vars.ICONS_APPLE_TOUCH_180 || 'assets/img/apple-touch-180x180.png' }}
             android_chrome_icon: ${{ vars.ICONS_ANDROID_CHROME_192 || 'assets/img/android-chrome-192x192.png' }}
             msapplication_tile_icon: ${{ vars.ICONS_MSAPPLICATION_TILE_150 || 'assets/img/mstile-150x150.png' }}
