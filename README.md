@@ -16,23 +16,20 @@ You can easily create your own "Coming Soon" site by forking this repository and
 1. **Fork this repository**  
    Click the "Fork" button at the top right of this page to create your own copy under your GitHub account.
 
-2. **Clone your fork (optional)**  
-   If you want to preview or edit locally, clone your forked repo to your computer.
+2. **Customize via GitHub Actions Variables**  
+   Go to your fork's **Settings** → **Secrets and variables** → **Actions** → **Variables** and set your site's title, description, hero text, contact info, social links, countdown date, and more ([see table below](#️-customizing-your-site)).
 
-3. **Customize via GitHub Actions Variables**  
-   Go to your fork’s **Settings** → **Secrets and variables** → **Actions** → **Variables** and set your site’s title, description, hero text, contact info, social links, countdown date, and more (see table below).
+3. **Deploy**  
+   Push to your `main` branch (or just save your variable changes). GitHub Actions will build and deploy your customized site automatically ([see GitHub Pages Configuration section below](#️-github-pages-configuration)).
 
-4. **Deploy**  
-   Push to your `main` branch (or just save your variable changes). GitHub Actions will build and deploy your customized site automatically.
-
-5. **Update Anytime**  
-   You can update your site’s content at any time by changing the variables—no need to edit code or HTML!
+4. **Update Anytime**  
+   You can update your site's content at any time by changing the variables—no need to edit code or HTML!
 
 ## 🛠️ Customizing Your Site
 
-You can change your site’s title, description, hero text, contact info, social links, and more by setting repository variables in GitHub:
+You can change your site's title, description, hero text, contact info, social links, and more by setting repository variables in GitHub:
 
-1. Go to your repo’s **Settings** → **Secrets and variables** → **Actions** → **Variables**.
+1. Go to your repo's **Settings** → **Secrets and variables** → **Actions** → **Variables**.
 2. Add or update these variables:
 
 | Variable Name        | Purpose                              | Default Value                                                                 | Example Value                        |
@@ -64,6 +61,10 @@ You can change your site’s title, description, hero text, contact info, social
 
 If a variable is not set, a default value will be used where shown above.
 
+## 🚀 Deploying
+
+Just push to the `main` branch—GitHub Actions will build and publish your site automatically!
+
 ## ⚙️ GitHub Pages Configuration
 
 Before your site can be published, make sure to configure GitHub Pages correctly:
@@ -72,7 +73,7 @@ Before your site can be published, make sure to configure GitHub Pages correctly
    Your repository must be **public** for GitHub Pages to deploy.
 
 2. **Set Pages Source:**  
-   Go to your repo’s **Settings** → **Pages**.  
+   Go to your repo's **Settings** → **Pages**.  
    - Under **Build and deployment**, set **Source** to **GitHub Actions** (not from a branch).
 
 3. **First Deployment:**  
@@ -82,61 +83,3 @@ Before your site can be published, make sure to configure GitHub Pages correctly
 4. **Troubleshooting:**  
    - If you see a 404, wait a few minutes for GitHub Pages to process the deployment.
    - Ensure your workflow completed successfully and the repo is public.
-
-## 🚀 Deploying
-
-Just push to the `main` branch—GitHub Actions will build and publish your site automatically!
-
-## 🧪 Testing Your Site Locally
-
-You can preview your site on your computer before pushing changes.
-
-### Option 1: Install Jekyll on Your Computer
-
-#### Step 1: Install Ruby and Jekyll
-
-**Windows (PowerShell as Administrator):**
-```powershell
-winget search ruby
-winget install RubyInstallerTeam.RubyWithDevKit.3.2
-
-# Add Ruby to your PATH (if not already added).
-# Replace 'C:\Ruby32-x64\bin' with your actual Ruby install path if different
-
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Ruby32-x64\bin", [System.EnvironmentVariableTarget]::Machine)
-
-# Restart your PowerShell terminal
-# You may need to restart your PC if `gem` is not found
-# Admin shell not necessary
-gem install jekyll bundler
-```
-
-**Mac:**
-```sh
-brew install ruby
-gem install jekyll bundler
-```
-
-**Linux (Ubuntu):**
-```sh
-sudo apt-get install ruby-full build-essential zlib1g-dev
-gem install jekyll bundler
-```
-
-#### Step 2: In your project folder
-
-```sh
-# First time only
-bundle install
-
-# Every time you want to test
-bundle exec jekyll serve --incremental --config _config/base.yml,_config/dev.yml
-```
-
-#### Step 3: Open your browser
-
-Visit [http://localhost:4000](http://localhost:4000)
-
----
-
-Happy building! 🌟
