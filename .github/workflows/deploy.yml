@@ -58,25 +58,25 @@ jobs:
             credits_text: "${{ vars.FOOTER_CREDITS || 'Crafted with ❤️ by <a href=\"https://github.com/christianwhocodes\" target=\"_blank\" rel=\"noopener\"><em>Christian Who Codes</em></a>' }}"
 
           contact:
-            email: "${{ vars.CONTACT_EMAIL || '' }}"
-            phone: "${{ vars.CONTACT_PHONE || '' }}"
+            email: "${{ vars.CONTACT_EMAIL }}"
+            phone: "${{ vars.CONTACT_PHONE }}"
 
           address:
-            street: "${{ vars.ADDRESS_STREET || '' }}"
-            city: "${{ vars.ADDRESS_CITY || '' }}"
+            street: "${{ vars.ADDRESS_STREET }}"
+            city: "${{ vars.ADDRESS_CITY }}"
 
           hours:
-            weekdays: "${{ vars.HOURS_WEEKDAYS || '' }}"
-            saturday: "${{ vars.HOURS_SATURDAY || '' }}"
-            sunday: "${{ vars.HOURS_SUNDAY || '' }}"
+            weekdays: "${{ vars.HOURS_WEEKDAYS }}"
+            saturday: "${{ vars.HOURS_SATURDAY }}"
+            sunday: "${{ vars.HOURS_SUNDAY }}"
 
           social:
-            twitter: "${{ vars.SOCIAL_TWITTER || '' }}"
-            facebook: "${{ vars.SOCIAL_FACEBOOK || '' }}"
-            instagram: "${{ vars.SOCIAL_INSTAGRAM || '' }}"
-            linkedin: "${{ vars.SOCIAL_LINKEDIN || '' }}"
+            twitter: "${{ vars.SOCIAL_TWITTER }}"
+            facebook: "${{ vars.SOCIAL_FACEBOOK }}"
+            instagram: "${{ vars.SOCIAL_INSTAGRAM }}"
+            linkedin: "${{ vars.SOCIAL_LINKEDIN }}"
 
-          countdown_date: "${{ vars.COUNTDOWN_DATE || '' }}"
+          countdown_date: "${{ vars.COUNTDOWN_DATE }}"
           EOF
 
       - name: Build with Jekyll
