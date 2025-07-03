@@ -4,8 +4,10 @@ keywords: bootstrap, template, coming soon
 author: Christian Who Codes
 
 icons:
-  favicon_ico: assets/img/favicon.ico
-  apple_touch_icon: assets/img/apple-touch-icon.png
+  favicon_ico: assets/img/favicon-32x32.ico
+  apple_touch_icon: assets/img/apple-touch-180x180.png
+  android_chrome_icon: assets/img/android-chrome-192x192.png
+  msapplication_tile_icon: assets/img/mstile-150x150.png
 
 background:
   image: assets/img/bg.jpg

@@ -15,12 +15,23 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ site.title }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
-    <!-- icons -->
+    <!-- Favicon -->
     <link rel="icon"
           href="{{ site.icons.favicon_ico }}"
           type="image/x-icon"
           sizes="any">
-    <link href="{{ site.icons.apple_touch_icon }}" rel="apple-touch-icon" />
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon"
+          href="{{ site.icons.apple_touch_icon }}"
+          sizes="180x180" />
+    <!-- Android Chrome icon -->
+    <link rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="{{ site.icons.android_chrome_icon }}" />
+    <!-- Microsoft tile icon -->
+    <meta name="msapplication-TileImage"
+          content="{{ site.icons.msapplication_tile_icon }}" />
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
@@ -42,7 +53,7 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
-    <!-- Custom CSS and JS -->  
+    <!-- Custom CSS and JS -->
     <style>
         body {
           background: url("{{ site.background.image }}") top center no-repeat;
