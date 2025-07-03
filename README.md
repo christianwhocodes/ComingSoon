@@ -1,4 +1,4 @@
-![](assets/img//social-preview.png)
+![](assets/img/readme.png)
 
 # [Coming Soon](https://github.com/christianwhocodes/ComingSoon) 🚀
 
