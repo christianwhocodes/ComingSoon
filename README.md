@@ -1,6 +1,6 @@
 ![](assets/img/readme.png)
 
-# [Coming Soon](https://github.com/christianwhocodes/ComingSoon) 🚀
+# Coming Soon 🚀
 
 This is a simple, customizable "Coming Soon" website built with [Jekyll](https://jekyllrb.com/) and automatically deployed to GitHub Pages using GitHub Actions.
 
